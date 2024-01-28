@@ -6,7 +6,7 @@ import { useState } from "react"
 
 
 
-export default function Home() {
+export default function StudentLayout({children}) {
   const [open,setOpen]=useState(false)
   return (
     <main className="flex h-screen flex-col">
@@ -16,7 +16,7 @@ export default function Home() {
           <Sidebar open={open} setOpen={setOpen}/>
         </div> */}
         <div className="sm:w-[calc(100%-16rem)] w-full p-1">
-          
+            {children}
         </div>        
       </div>
     </main>
